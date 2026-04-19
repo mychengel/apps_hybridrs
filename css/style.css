@@ -179,6 +179,7 @@ body {
   width: 100%;
   padding-top: 75%;
   background: var(--cream);
+  background-color: #ffffff;
   overflow: hidden;
 }
 
@@ -187,7 +188,7 @@ body {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform 0.3s;
 }
 
