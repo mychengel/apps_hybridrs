@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Konfirmasi Pembelian - Kafe Nusantara</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+  <span class="header-logo">☕</span>
+  <div>
+    <div class="header-title">Kafe Nusantara</div>
+    <div class="header-subtitle">Konfirmasi Pembelian</div>
+  </div>
+</header>
+
+<div class="checkout-container">
+  <button class="back-btn" onclick="window.location.href='index.html'">
+    ← Kembali ke Menu
+  </button>
+
+  <!-- Recommendation Section -->
+  <div class="section-card" id="recoSection">
+    <div class="reco-loading" id="recoLoading">
+      <div class="spinner"></div>
+      <div class="reco-loading-text">Menyiapkan rekomendasi untuk Anda...</div>
+    </div>
+  </div>
+
+  <!-- Cart Items -->
+  <div class="section-card">
+    <div class="section-title">🧾 Pesanan Anda</div>
+    <table class="order-table">
+      <thead>
+        <tr>
+          <th style="width:60px"></th>
+          <th>Produk</th>
+          <th style="text-align:right">Harga</th>
+          <th style="text-align:center;padding-left:12px">Qty</th>
+          <th style="text-align:right">Subtotal</th>
+        </tr>
+      </thead>
+      <tbody id="orderTableBody"></tbody>
+    </table>
+  </div>
+
+  <!-- Payment Summary -->
+  <div class="section-card">
+    <div class="section-title">💳 Ringkasan Pembayaran</div>
+    <div id="paymentSummary"></div>
+    <button class="btn-checkout" onclick="handleCheckout()">
+      ✅ Konfirmasi & Bayar
+    </button>
+  </div>
+</div>
+
+<!-- Success Modal -->
+<div class="modal-overlay" id="successModal">
+  <div class="modal" style="max-width:380px;text-align:center">
+    <div class="modal-header" style="background:#4caf50;justify-content:center">
+      <span class="modal-title">Pesanan Berhasil!</span>
+    </div>
+    <div class="modal-body" style="padding:32px 24px">
+      <div style="font-size:4rem;margin-bottom:16px">🎉</div>
+      <p style="font-size:1rem;font-weight:600;color:#2c1810;margin-bottom:8px">
+        Terima kasih telah berbelanja!
+      </p>
+      <p style="font-size:0.85rem;color:#5a3a28">
+        Pesanan Anda sedang diproses. Silakan tunggu sebentar.
+      </p>
+    </div>
+    <div class="modal-footer">
+      <button class="btn-primary" onclick="resetAndGoHome()">
+        Kembali ke Menu Utama
+      </button>
+    </div>
+  </div>
+</div>
+
+<script src="js/products.js"></script>
+<script src="js/checkout.js"></script>
+</body>
+</html>
