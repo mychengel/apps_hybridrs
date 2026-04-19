@@ -77,7 +77,7 @@ function renderProducts() {
     card.innerHTML = `
       <div class="product-img-wrap">
         <img class="product-img" src="${p.image}" alt="${p.name}" loading="lazy"
-             style="background-color: #ffffff;" onerror="this.src='images/others.png'"/>
+             style="background-color: #ffffff;object-fit: contain;" onerror="this.src='images/others.png'"/>
         <span class="category-badge">${p.category}</span>
       </div>
       <div class="product-body">
