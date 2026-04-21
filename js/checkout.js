@@ -1,4 +1,4 @@
-const API_BASE = "https://scaling-space-invention-9qxrjrgjp6wfxgp6-8000.app.github.dev";
+const API_BASE = "https://automatic-happiness-549jxj7rvgx27964-8000.app.github.dev/";
 const TAX_RATE = 0.11; // PPN 11%
 
 let cart = JSON.parse(localStorage.getItem("cart") || "[]");
